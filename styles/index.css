@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Uniform Rounded';
+  src: url('../public/fonts/UniformRounded.otf');
+}
+
+html,
+body {
+  min-height: 100%;
+  height: max-content;
+}
+
+body {
+  background-color: white;
+  background-image: url('/images/bg_main.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
