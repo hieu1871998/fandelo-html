@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Uniform Rounded';
-  src: url('../public/fonts/UniformRounded.otf');
+  src: url('../fonts/UniformRounded.otf');
 }
 
 html,
@@ -24,4 +24,8 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.font-uniformRounded {
+  font-family: 'Uniform Rounded';
 }
