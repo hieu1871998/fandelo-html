@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fandelo</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script defer type="text/javascript" src="scripts/index.js"></script>
   <link rel="stylesheet" type="text/css" href="styles/index.css">
 </head>
 
@@ -35,23 +36,32 @@
                 <span>Vendor Sign Up</span>
               </div>
               <div class="mt-8">
-                <form>
+                <form action="" onsubmit="">
                   <div class="xl:w-96 sm:w-80 w-72 flex flex-row">
                     <input type="text" placeholder="First Name" class="w-full mr-1 rounded p-2" />
                     <input type="text" placeholder="Last Name" class="w-full ml-1 rounded p-2" />
                   </div>
                   <div class="xl:w-96 sm:w-80 w-72 mt-2 flex flex-row">
-                    <input type="text" class="w-full mr-1 rounded p-2" placeholder="Email Address" />
+                    <input id="emailInput" type="text" class="w-full mr-1 rounded p-2" placeholder="Email Address" />
                     <input type="text" placeholder="Shop Public Name" class="w-full ml-1 rounded p-2" />
+                  </div>
+                  <div id="invalidEmailNoti" class="xl:w-96 sm:w-80 w-72 mt-2 text-sm text-red-600 hidden">
+                    <span>* Invalid email address format.</span>
                   </div>
                   <div class="xl:w-96 sm:w-80 w-72 mt-2">
                     <input type="text" placeholder="Shop URL" class="w-full rounded p-2" />
                   </div>
                   <div class="xl:w-96 sm:w-80 w-72 mt-2">
-                    <input type="password" placeholder="Password" class="w-full rounded p-2" />
+                    <input id="passwordInput" type="password" placeholder="Password" class="w-full rounded p-2" />
+                  </div>
+                  <div id="invalidPasswordNoti" class="xl:w-96 sm:w-80 w-72 mt-2 text-sm text-red-600 hidden">
+                    <span>* Minimum of different classes of characters in password is 3. Classes of characters: Lower Case, Upper Case, Digits, Special Characters.</span>
                   </div>
                   <div class="xl:w-96 sm:w-80 w-72 mt-2">
-                    <input type="password" placeholder="Confirm Password" class="w-full rounded p-2" />
+                    <input id="confirmPasswordInput" type="password" placeholder="Confirm Password" class="w-full rounded p-2" />
+                  </div>
+                  <div id="invalidConfirmPasswordNoti" class="xl:w-96 sm:w-80 w-72 mt-2 text-sm text-red-600 hidden">
+                    <span>* Password mismatch.</span>
                   </div>
                   <div class="xl:w-96 sm:w-80 w-72 mt-8 flex flex-row justify-center items-center">
                     <input type="checkbox" class="
