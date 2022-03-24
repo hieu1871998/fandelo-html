@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fandelo</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <script defer type="text/javascript" src="scripts/tailwind.config.js"></script>
+  <script defer type="text/javascript" src="scripts/index.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles/index.css">
+</head>
+<body>
+  <div class="container m-auto h-full">
+    <div class="absolute top-0 left-0 w-full h-full min-h-screen -z-10 bg-black bg-opacity-40">
+      <div class="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-black to-transparent"></div>
+      <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black to-transparent"></div>
+    </div>
+    <main class="h-full xl:mb-20 mb-0">
+      <div class="container flex flex-col items-center xl:mt-16 mt-5 mx-auto">
+        <a href="index.html">
+          <div class="flex flex-row justify-center items-center w-min select-none">
+            <div class="relative w-64 h-14">
+              <Image src="images/fandelo-logo.png" alt="" layout="fill" class="relative" />
+            </div>
+          </div>
+        </a>
+        <div class="w-full xl:mt-12 mt-5 z-10">
+          <div class="container">
+            <div class="xl:w-100.5 lg:w-100.5 md:w-100.5 sm:w-100.5 bg-black bg-opacity-40 p-8 mx-auto">
+              <div class="text-4xl text-white font-sans font-bold mb-8">
+                <span>Reset Password</span>
+              </div>
+              <div>
+                <form>
+                  <div class="w-full mt-4">
+                    <input id="newPasswordInput" type="password" placeholder="New Password" class="w-full rounded p-4 text-sm placeholder:text-black" />
+                  </div>
+                  <div id="invalidPasswordNoti" class="w-full mt-4 text-sm text-red-600 hidden">
+                    <span>* Minimum of different classes of characters in password is 3. Classes of characters: Lower Case, Upper Case, Digits, Special Characters.</span>
+                  </div>
+                  <div class="w-full mt-4">
+                    <input id="confirmNewPasswordInput" type="password" placeholder="Confirm New Password" class="w-full rounded p-4 text-sm placeholder:text-black" />
+                  </div>
+                  <div id="invalidConfirmPasswordNoti" class="w-full mt-4 text-sm text-red-600 hidden">
+                    <span>* Password mismatch.</span>
+                  </div>
+                  <button
+                    id="resetButton"
+                    type="button"
+                    class="
+                      w-full h-12 mt-8 text-base text-white font-sans font-bold rounded bg-green-600 transition-all duration-300
+                      hover:bg-green-700
+                    "
+                  >
+                    <span>Save New Password</span>
+                  </button>
+                </form>
+                <div class="w-80 mt-8 text-center font-sans font-semibold">
+                  <span class="text-white">
+                    Back to&nbsp;
+                  </span>
+                  <Link href="">
+                  <a href="login.html" class="
+                              text-red-600
+                              hover:underline
+                            ">
+                    Vendor Log In
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div id="resetPopup" class="z-10 fixed flex justify-center items-center top-0 left-0 w-full h-full bg-black bg-opacity-50 hidden">
+      <div class="p-8 w-96 bg-white rounded">
+        <div class="w-full flex justify-center my-8">
+          <img src="/icons/done_24px.png" />
+        </div>
+        <div class="text-center font-sans">
+          <span>You have updated your password.</span>
+        </div>
+        <button
+          id="resetPopupButton"
+          type="button"
+          class="
+            w-full h-12 mt-8 text-base text-white font-sans font-bold rounded bg-green-600 transition-all duration-300
+            hover:bg-green-700
+          "
+        >
+          <span>Go to Vendor Page</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

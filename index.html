@@ -5,43 +5,37 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fandelo</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script type="text/javascript" src="scripts/index.js"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <script defer type="text/javascript" src="scripts/tailwind.config.js"></script>
+  <script defer type="text/javascript" src="scripts/index.js"></script>
   <link rel="stylesheet" type="text/css" href="styles/index.css">
 </head>
 <body>
   <div class="container m-auto h-full">
-    <div class="absolute top-0 left-0 w-full h-full min-h-screen -z-10">
-      <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black to-transparent"></div>
-      <div class="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-black to-transparent"></div>
+    <div class="absolute top-0 left-0 w-full h-full min-h-screen -z-10 bg-black bg-opacity-40">
+      <div class="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-black to-transparent"></div>
+      <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black to-transparent"></div>
     </div>
     <main class="h-full xl:mb-20 mb-0">
       <div class="container flex flex-col items-center xl:mt-16 mt-5 mx-auto">
         <a href="index.html">
           <div class="flex flex-row justify-center items-center w-min select-none">
-            <div class="relative w-12 h-10">
+            <div class="relative w-64 h-14">
               <Image src="images/fandelo-logo.png" alt="" layout="fill" class="relative" />
-            </div>
-            <div class="text-4xl text-red-600 font-uniformRounded w-full mx-2">
-              <span>FANDELO</span>
             </div>
           </div>
         </a>
         <div class="w-full xl:mt-12 mt-5 z-10">
           <div class="container mt-56 mx-auto">
             <div
-              class="container xl:text-4xl lg:text-3xl md:text-2xl text-center text-white font-sans tracking-wide select-none">
-              <p class="font-bold">
-                THE WORLD&apos;S #1 PLATFORM
-              </p>
-              <p class="font-semibold">
-                FOR FANS OF SPORTS, MUSIC AND ENTERTAINMENT
-              </p>
+              class="container text-4xl text-center text-white font-sans font-bold tracking-wide select-none">
+              <p class="mb-4">THE WORLD&apos;S #1 PLATFORM FOR FANS OF</p>
+              <p>SPORTS, MUSIC AND ENTERTAINMENT</p>
             </div>
             <div class="w-full mt-8 px-48 flex flex-row justify-center">
               <a href="signup.html">
                 <button class="
-                  xl:w-64 lg:w-52 md:w-44 sm:w-36 w-32 py-2 m-2 text-base text-white font-sans rounded bg-red-600 transition-all duration-300
+                  w-56 h-12 my-2 mx-4 text-lg text-white font-sans font-semibold rounded bg-red-600 transition-all duration-300
                   hover:bg-red-700
                 ">
                   <span>Sign Up</span>
@@ -49,7 +43,7 @@
               </a>
               <a href="login.html">
                 <button class="
-                  xl:w-64 lg:w-52 md:w-44 sm:w-36 w-32 py-2 m-2 text-base text-white font-sans rounded bg-green-600 transition-all duration-300
+                  w-56 h-12 my-2 mx-4 text-lg text-white font-sans font-semibold rounded bg-green-600 transition-all duration-300
                   hover:bg-green-700
                 ">
                   <span>Log In</span>

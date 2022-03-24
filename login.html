@@ -5,57 +5,58 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fandelo</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script type="text/javascript" src="scripts/index.js"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <script defer type="text/javascript" src="scripts/tailwind.config.js"></script>
+  <script defer type="text/javascript" src="scripts/index.js"></script>
   <link rel="stylesheet" type="text/css" href="styles/index.css">
 </head>
 <body>
-  <div class="container m-auto h-full w-full">
-    <div class="absolute top-0 left-0 w-full h-full min-h-screen -z-10">
-      <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black to-transparent"></div>
-      <div class="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-black to-transparent"></div>
+  <div class="container m-auto h-full">
+    <div class="absolute top-0 left-0 w-full h-full min-h-screen -z-10 bg-black bg-opacity-40">
+      <div class="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-black to-transparent"></div>
+      <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black to-transparent"></div>
     </div>
     <main class="h-full xl:mb-20 mb-0">
       <div class="container flex flex-col items-center xl:mt-16 mt-5 mx-auto">
         <a href="index.html">
           <div class="flex flex-row justify-center items-center w-min select-none">
-            <div class="relative w-12 h-10">
+            <div class="relative w-64 h-14">
               <Image src="images/fandelo-logo.png" alt="" layout="fill" class="relative" />
-            </div>
-            <div class="text-4xl text-red-600 font-uniformRounded w-full mx-2">
-              <span>FANDELO</span>
             </div>
           </div>
         </a>
         <div class="w-full xl:mt-12 mt-5 z-10">
           <div class="container">
-            <div class="w-min bg-black bg-opacity-50 p-8 mx-auto">
-              <div class="text-2xl text-white font-sans font-semibold">
-                <span>Vendor Sign Up</span>
+            <div class="xl:w-100.5 lg:w-100.5 md:w-100.5 sm:w-100.5 bg-black bg-opacity-40 p-8 mx-auto">
+              <div class="text-4xl text-white font-sans font-bold mb-8">
+                <span>Vendor Log In</span>
               </div>
-              <div class="mt-8">
+              <div>
                 <form>
-                  <div class="w-80 mt-2">
-                    <input type="email" placeholder="Email" class="w-full rounded p-2" />
+                  <div class="w-full mt-4">
+                    <input type="email" placeholder="Email" class="w-full rounded p-4 text-sm placeholder:text-black" />
                   </div>
-                  <div class="w-80 mt-2">
-                    <input type="password" placeholder="Password" class="w-full rounded p-2" />
+                  <div class="w-full mt-4">
+                    <input type="password" placeholder="Password" class="w-full rounded p-4 text-sm placeholder:text-black" />
                   </div>
-                  <button type="submit" class="
-                            w-80 py-2 mt-8 text-base text-white font-sans rounded bg-green-600 transition-all duration-300
-                            hover:bg-green-700
-                          ">
+                  <button
+                    type="submit"
+                    class="
+                      w-full h-12 mt-8 text-base text-white font-sans font-bold rounded bg-green-600 transition-all duration-300
+                      hover:bg-green-700
+                    "
+                  >
                     <span>Log In</span>
                   </button>
                 </form>
-                <div class="mt-4 text-right text-white underline">
-                  <a href="#">
+                <div class="mt-4 text-right text-white text-xs underline">
+                  <a href="forgot.html">
                     Forgot Your Password?
                   </a>
                 </div>
-                <div class="w-80 mt-8 text-sm text-center">
-                  <span class="text-white mr-1">
-                    Don’t have account?
+                <div class="w-full mt-8 text-center font-sans font-semibold">
+                  <span class="text-white">
+                    Don’t have account?&nbsp;
                   </span>                  <Link href="">
                   <a href="signup.html" class="
                               text-red-600

@@ -1,6 +1,14 @@
 const emailInput = document.getElementById('emailInput');
 const passwordInput = document.getElementById('passwordInput');
 const confirmPasswordInput = document.getElementById('confirmPasswordInput');
+const signupButton = document.getElementById('signupButton');
+const signupPopup = document.getElementById('signupPopup');
+const signupPopupButton = document.getElementById('signupPopupButton');
+const newPasswordInput = document.getElementById('newPasswordInput');
+const confirmNewPasswordInput = document.getElementById('confirmNewPasswordInput');
+const resetButton = document.getElementById('resetButton');
+const resetPopup = document.getElementById('resetPopup');
+const resetPopupButton = document.getElementById('resetPopupButton');
 
 const validateEmail = () => {
   const invalidEmailNoti = document.getElementById('invalidEmailNoti');
@@ -29,14 +37,15 @@ const validatePassword = () => {
     } else {
       invalidPasswordNoti.classList.add('hidden');
     }
+    return;
   }
+  invalidPasswordNoti.classList.add('hidden');
 }
 
 const confirmPassword = () => {
   const invalidConfirmPasswordNoti = document.getElementById('invalidConfirmPasswordNoti');
   const password = passwordInput.value;
   const confirmPassword = confirmPasswordInput.value;
-  console.log('confirming')
 
   if (confirmPassword) {
     if (confirmPassword != password) {
@@ -47,7 +56,25 @@ const confirmPassword = () => {
   }
 }
 
-emailInput.onkeyup = validateEmail
-passwordInput.onkeyup = validatePassword;
-confirmPasswordInput.onkeyup = confirmPassword;
+const signupSubmit = () => {
+  signupPopup.classList.remove('hidden');
+}
 
+const resetSubmit = () => {
+  resetPopup.classList.remove('hidden');
+}
+
+const gotoVendor = () => {
+  if (signupPopup) signupPopup.classList.add('hidden');
+  if (resetPopup) resetPopup.classList.add('hidden');
+}
+
+if (emailInput) emailInput.onkeyup = validateEmail;
+if (passwordInput) passwordInput.onkeyup = validatePassword;
+if (confirmPasswordInput) confirmPasswordInput.onkeyup = confirmPassword;
+if (signupButton) signupButton.onclick = signupSubmit;
+if (signupPopupButton) signupPopupButton.onclick = gotoVendor;
+if (passwordInput) newPasswordInput.onkeyup = validatePassword;
+if (confirmPasswordInput) confirmNewPasswordInput.onkeyup = confirmPassword;
+if (resetButton) resetButton.onclick = resetSubmit;
+if (resetPopupButton) resetPopupButton.onclick = gotoVendor;
